@@ -90,14 +90,14 @@ body{
             <img style="vertical-align: middle;" src="user.svg" width="30px" height="30px">
         <span class="user">User: </span> <i class="nmUsuario"> <?php  
         session_start();
-        if(isset( $_SESSION['nm_funcionario'])){
+        if(isset( $_SESSION['funcionario_nm'])){
 
-           $name = $_SESSION['funcionario_id'];
+           $name = $_SESSION['funcionario_nm'];
            echo $name;
 
         }
         else{
-            echo "Deslogado";
+            echo "<script>alert('Você não realizou o login!'); history.back() </script>";
         }
         
         
